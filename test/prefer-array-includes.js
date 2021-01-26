@@ -134,7 +134,7 @@ test({
 		}),
 		suggestionCase({
 			code: 'values.some((x => foo() === x))',
-			output: 'values.includes(foo())'
+			output: 'values.includes((foo()))'
 		})
 	]
 });
