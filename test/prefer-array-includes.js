@@ -127,6 +127,14 @@ test({
 		suggestionCase({
 			code: 'values.some(function(x) {return foo() === x;})',
 			output: 'values.includes(foo())'
+		}),
+		suggestionCase({
+			code: 'values.some(x => (x === foo()))',
+			output: 'values.includes(foo())'
+		}),
+		suggestionCase({
+			code: 'values.some((x => foo() === x))',
+			output: 'values.includes(foo())'
 		})
 	]
 });
